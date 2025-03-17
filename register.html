@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Fitness Tracker</title>
+    <style>
+        /* Set up the background image */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-image: url(https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Overlay to make the form readable */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Centered registration form */
+        .registration-form {
+            position: relative;
+            background: transparent;
+            background-color: rgba(213, 215, 229, 0.5); /* Transparent black overlay */
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 15px 0px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            background-color: #333;
+
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .btn:active {
+            background-color: #3e8e41;
+        }
+
+        .login-btn {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-btn a {
+            color: #07d70e;
+            text-decoration: none;
+        }
+
+        .login-btn a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div> <!-- Semi-transparent overlay for better readability -->
+
+    <div class="registration-form">
+        <h2>Register for Fitness Tracker</h2>
+        
+        <!-- Registration Form -->
+        <form action="/register" method="POST">
+            <!-- Username input -->
+            <input type="text" name="username" placeholder="Username" required>
+
+            <!-- Email input -->
+            <input type="email" name="email" placeholder="Email" required>
+
+            <!-- Password input -->
+            <input type="password" name="password" placeholder="Password" required>
+
+            <!-- Confirm Password input -->
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+            <!-- Register button -->
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <div class="login-btn">
+            <p>Already have an account? <a href="/login">Login here</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
